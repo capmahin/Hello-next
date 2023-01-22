@@ -1,7 +1,18 @@
 
-
+//Style-JSX
 export default function Home(props) {
-  return <h1>Hello World</h1>
+  return <div>
+    <h1 className="title">Hello World</h1>
+    <style jsx>
+      {
+        `
+          .title{
+            color:red;
+          } 
+        `
+      }
+    </style>
+  </div>
 
 
 }
