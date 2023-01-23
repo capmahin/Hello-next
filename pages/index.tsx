@@ -6,7 +6,7 @@ function Heading(props) {
 
   return (
     <div>
-      <h1 className={styles.red}>{props.heading}</h1>
+      <h1 className={styles.red}> <span>i am red </span>{props.heading}</h1>
 
     </div>
   )
