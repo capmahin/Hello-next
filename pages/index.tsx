@@ -1,3 +1,4 @@
+import './main.module.css'
 
 //Style-JSX
 
