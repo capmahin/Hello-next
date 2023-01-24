@@ -1,21 +1,26 @@
-import styles from './index.module.scss'
+// import styles from './index.module.scss'
 
-//Style-JSX
+// //Style-JSX
 
-function Heading(props) {
+// function Heading(props) {
 
-  return (
-    <div>
-      <h1 className={styles.red}> <span>i am red </span>{props.heading}</h1>
+//   return (
+//     <div>
+//       <h1 className={styles.red}> <span>i am red </span>{props.heading}</h1>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default function Home() {
+export default function Home(req, res) {
   return <div>
-    <Heading heading="heading" />
-    <h1>here</h1>
+    <form method="POST" action="/api/login">
+      <input type="text" value="admin" />
+      <br />
+      <input type="password" value="admin" />
+      <br />
+      <input type="submit" value="Login" />
+    </form>
 
   </div >
 
