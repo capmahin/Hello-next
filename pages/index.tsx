@@ -12,12 +12,12 @@
 //   )
 // }
 
-export default function Home(req, res) {
+export default function Home() {
   return <div>
     <form method="POST" action="/api/login">
-      <input type="text" value="admin" />
+      <input type="text" name="username" value="admin" />
       <br />
-      <input type="password" value="admin" />
+      <input type="password" name="password" value="admin" />
       <br />
       <input type="submit" value="Login" />
     </form>
