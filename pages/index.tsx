@@ -25,6 +25,9 @@ export default function Home() {
   async function submitFrom() {
     const res = await fetch('/api/login', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ username, password })
     }).then((t) => t.json())
 
@@ -32,6 +35,8 @@ export default function Home() {
 
     if (token) {
       const json = jwt.decode(token) as { [key: string]: string }
+
+      console.log(json)
       setMessage(`Welcome ${json.username} and you are ${json.admin ? 'an admin!' : 'not an admin!'}`)
     } else {
       setMessage('Something went wrong')
